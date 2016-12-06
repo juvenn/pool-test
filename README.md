@@ -22,7 +22,7 @@ commons-pool2 being used:
 
 Then start a redis server on localhost, listening at port 6379.
 
-And at another terminal window, runs:
+And at another terminal window:
 
 ```
 lein run 5000 20
@@ -32,7 +32,7 @@ which, at every 5000ms, will start 20 concurrent threads ping-pong redis
 server. It'll output `PONG` if success, error message otherwise. Observe the
 output, while starting and stopping redis server. It shall show that redis
 connection could **not** be re-established after restart.  <kbd>C-c</kbd> to
-terminate run. 
+terminate run.
 
 Then change version to `2.4.2`:
 
