@@ -9,7 +9,7 @@ its connection pool.
 
 We encountered issues with commons-pool2 version 2.0, where redis
 connection could not be acquired after redis server restarted,
-throwing `NoSuchElementException: Waiting timeout on idle objects.`.
+throwing `NoSuchElementException: Waiting timeout on idle objects`.
 
 ## Run test
 
@@ -33,6 +33,8 @@ server. It'll output `PONG` if success, error message otherwise. Observe the
 output, while starting and stopping redis server. It shall show that redis
 connection could **not** be re-established after restart.  <kbd>C-c</kbd> to
 terminate run.
+
+----
 
 Then change version to `2.4.2`:
 
