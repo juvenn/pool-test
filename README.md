@@ -28,11 +28,11 @@ And at another terminal window, runs:
 lein run 5000 20
 ```
 
-Every 5000ms, starts 20 threads ping-pong redis server, <kbd>C-c</kbd>
-to terminate. It'll output `PONG` if success, error message otherwise.
-
-Observe the output, while starting and stopping redis server. It shall show
-that redis connection could not be re-established after restart.
+which, at every 5000ms, will start 20 concurrent threads ping-pong redis
+server. It'll output `PONG` if success, error message otherwise. Observe the
+output, while starting and stopping redis server. It shall show that redis
+connection could **not** be re-established after restart.  <kbd>C-c</kbd> to
+terminate run. 
 
 Then change version to `2.4.2`:
 
@@ -40,8 +40,8 @@ Then change version to `2.4.2`:
 [org.apache.commons/commons-pool2 "2.4.2"] 
 ```
 
-and re-run lein. It shall show redis connection could be
-re-established after restart.
+and re-run lein. It shall show redis connection could be re-established after
+restart.
 
 Try increasing number of thread:
 
